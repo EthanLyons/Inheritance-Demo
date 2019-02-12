@@ -1,11 +1,8 @@
-edu.cnm.deepdive.CanisLupus buck = new edu.cnm.deepdive.CanisLupus();
-buck.vocalize();
-buck.hunt();
-System.out.println(buck.NUMBER_OF_LEGS );
-System.out.println(buck);
+edu.cnm.deepdive.Trainable[] menagerie = {
+    new edu.cnm.deepdive.CanisLupusFamiliaris(false),
+    new edu.cnm.deepdive.Seal()
+}
 
-edu.cnm.deepdive.CanisLupus fido = new edu.cnm.deepdive.CanisLupusFamiliaris();
-fido.vocalize();
-fido.hunt();
-System.out.println(fido.NUMBER_OF_LEGS + " Legs");
-System.out.println(fido)
+for (edu.cnm.deepdive.Trainable animal : menagerie)	{
+  animal.perform();
+}

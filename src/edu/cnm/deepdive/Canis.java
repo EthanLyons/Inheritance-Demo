@@ -4,17 +4,29 @@ public abstract class Canis {
 
  public static final int NUMBER_OF_LEGS = 4;
  
- public abstract void vocalize();
- 
+private final int[] data;
+
+
+public abstract void vocalize();
+
  public abstract void hunt();
 
-/*
- * (non-Javadoc)
- * @see java.lang.Object#toString()
- */
  @Override
-public String toString() {
+ public String toString() {
    return "I am a " + this.getClass().getSimpleName();
+ }
+
+ public static void about() {
+   System.out.println("Canis is a genus of Canidae, distinguished by its large size, massive skull, and long legs.");
+ }
+
+ public int[] getData() {
+   return data;
+ }
+
+ {
+  data = new int[] {1, 2, 3,};
+  System.out.println("Canis::initialize");
  }
  
 }

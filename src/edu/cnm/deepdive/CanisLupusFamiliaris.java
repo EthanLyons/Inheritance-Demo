@@ -1,10 +1,15 @@
 package edu.cnm.deepdive;
 
-public class CanisLupusFamiliaris extends CanisLupus {
+import java.util.Arrays;
 
-  /* (non-Javadoc)
-   * @see edu.cnm.deepdive.CanisLupus#vocalize()
-   */
+public class CanisLupusFamiliaris extends CanisLupus implements Trainable {
+
+  public CanisLupusFamiliaris() {
+    System.out.println("CanisLupisFamiliaris::new");
+    getData()[2] = 5;
+    System.out.println(Arrays.toString(getData()));
+  }
+   
   @Override
   public void vocalize() {
     // TODO Auto-generated method stub
@@ -17,8 +22,17 @@ public class CanisLupusFamiliaris extends CanisLupus {
    */
   @Override
   public String toString() {
-    return super.toString() + " and I am a good boy.";
+    return super.toString() + " and I am a good boy";
   }
+  
+  public static void about()    {
+    System.out.println("Look nothing like other guys ");
+  }
+ 
+ @Override
+ public void perform()  {
+   System.out.println("Play fetch");
+ }
 
    
 }
